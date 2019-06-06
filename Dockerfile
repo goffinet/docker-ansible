@@ -2,7 +2,7 @@
 
 FROM ubuntu:bionic
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y --no-install-recommends \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends \
     install telnet curl openssh-client nano vim-tiny iputils-ping python build-essential \
     libssl-dev libffi-dev python-pip python3-pip python-setuptools \
     python-dev net-tools python3 software-properties-common git \
