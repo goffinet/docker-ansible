@@ -14,9 +14,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-rec
     && rm -rf /var/lib/apt/lists/* \
     && pip install cryptography netmiko napalm pyntc \
     && pip install --upgrade paramiko \
-    && mkdir /scripts \
-    && echo "auto eth0" >> /etc/network/interfaces \
-    && echo "iface eth0 inet dhcp" >> /etc/network/interfaces
+    && mkdir /scripts
 
 VOLUME [ "/root","/usr", "/scripts" ]
 CMD [ "sh", "-c", "cd; exec bash -i" ]
