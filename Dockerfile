@@ -10,7 +10,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y --no-install-rec
     && apt-add-repository -y ppa:ansible/ansible-2.8 \
     && apt-get update && apt-get -y --no-install-recommends install ansible \
     && rm -rf /var/lib/apt/lists/* \
-    && pip install --upgrade pip \
     && pip install cryptography netmiko napalm pyntc \
     && pip install --upgrade paramiko \
     && mkdir /scripts
