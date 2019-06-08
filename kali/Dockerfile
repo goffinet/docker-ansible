@@ -11,6 +11,7 @@ RUN apt-get update \
     snmp dsniff fping hping3 tshark python-scapy \
     nload ifstat iftop traceroute thc-ipv6 arp-scan wget \
     netrw netcat cryptcat gnupg \
+		cisco-global-exploiter cisco-auditing-tool metasploit-framework \
     && echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 \
     && apt-get update && apt-get -y --no-install-recommends install ansible \
