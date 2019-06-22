@@ -10,7 +10,7 @@ RUN apt-get update \
     nmap hydra sqlmap telnet openssh-client dnsutils yersinia ettercap-text-only \
     snmp dsniff fping hping3 tshark python-scapy jq \
     nload ifstat iftop traceroute thc-ipv6 arp-scan wget \
-    netrw netcat cryptcat \
+    netrw netcat cryptcat screen \
     && apt-add-repository -y ppa:ansible/ansible-2.8 \
     && apt-get update && apt-get -y --no-install-recommends install ansible \
     && rm -rf /var/lib/apt/lists/* \
